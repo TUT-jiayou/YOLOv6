@@ -11,6 +11,7 @@ Change work directory to `/path/to/YOLOv6/deploy/ONNX/OpenCV`
 ### 1.1 Python
 
 - YOLOv5 & YOLOv6:
+  * image inference
 ```Python
 python yolo.py --model /path/to/onnx/yolov5n.onnx --img /path/to/sample.jpg --classesFile /path/to/coco.names
                                      yolov5s.onnx
@@ -18,6 +19,12 @@ python yolo.py --model /path/to/onnx/yolov5n.onnx --img /path/to/sample.jpg --cl
                                      yolov6n.onnx
                                      yolov6s.onnx
                                      yolov6t.onnx
+```
+  * video inference using usb camera
+```Python
+# Env ubuntu 18.04 RTX 2080Ti
+# opencv 4.6.0 python3.9
+python yolo_video.py
 ```
 - YOLOX:
 ```Python
